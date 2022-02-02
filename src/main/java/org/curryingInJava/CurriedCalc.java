@@ -49,4 +49,13 @@ public class CurriedCalc {
          * apply() method (which performs the calculation), we could reverse these parameter names. This would
          * result in d c b a instead of a b c d, but it would still achieve the same result of 21.
          * */
+
+        // Update with lambda:
+    /**
+     * static Function<Integer, Function<Integer, Function<Integer, Integer>>>
+     *    calc(Integer a)
+     * {
+     *    return b -> c -> d -> (a + b) * (c + d);
+     * }
+     * */
     }
