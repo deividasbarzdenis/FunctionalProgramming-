@@ -19,14 +19,14 @@ public class Lambda {
          * One such type is java.lang.Runnable, because Runnable's void run() method also has an empty
          * formal parameter list:
          * */
-        Runnable r = () -> System.out.println("my first lambda");
-
+        Runnable r = (() -> System.out.println("my first lambda"));
+        r.run();
         /**
          * You can pass the lambda anywhere that a Runnable argument is required; for example, the Thread(Runnable r)
          * constructor. Assuming that the previous assignment has occurred, you could pass r to this constructor,
          * as follows:
          * */
-        new Thread(() -> System.out.println("my first lambda"));
+        new Thread(() -> System.out.println("my first lambda")).start();
 
         // A lambda-based file filter
         File[] txtFiles = new File(".").listFiles(p -> p.getAbsolutePath().endsWith("txt"));
